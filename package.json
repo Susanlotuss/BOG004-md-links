@@ -3,5 +3,41 @@
   "version": "0.1.0",
   "engines": {
     "node": ">=14.x"
+  },
+  "description": "project mdLinks",
+  "main": "./src/index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "jest --env=jsdom --coverage",
+    "lint": "eslint --fix",
+    "build": "npm run lint && npm run test",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Susanlotuss/BOG004-md-links.git"
+  },
+  "author": "Susana Martinez",
+  "license": "ISC",
+  "keywords": [
+    "cli",
+    "api",
+    "recursive",
+    "npm"
+  ],
+  "dependencies": {
+    "inquirer": "^8.2.4",
+    "jest-cli": "^28.0.3",
+    "marked": "^4.0.15",
+    "node-fetch": "^2.6.7"
+  },
+  "bin": {
+    "md-links": "controller/cli.js"
+  },
+  "devDependencies": {
+    "eslint": "^8.15.0",
+    "jest-environment-jsdom": "^28.0.2"
   }
 }

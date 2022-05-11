@@ -1,0 +1,33 @@
+{
+    "editor.tokenColorCustomizations": {
+        "[Rosé Pine]": {
+            "textMateRules": [
+                {
+                    "scope": "variable.other",
+                    "settings": {
+                        "foreground": "#FFA4A2",
+                    }
+                },
+                {
+                    "scope": "entity.name",
+                    "settings": {
+                        "foreground": "#CBE8B5"
+                    }
+                },
+                {
+                    "scope": "string",
+                    "settings": {
+                        "foreground": "#ff7bd3"
+                    }
+                },
+                {
+                    "scope": "variable.parameter",
+                    "settings": {
+                        "foreground": "#d8b4ffe5",
+                    }
+                },
+            ]
+        }
+    }
+
+}
