@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /* eslint-disable no-undef */
 //  const inquirer = require('inquirer');
-const { mdLinks } = require('../index.js');
+const { mdLinks } = require('./index.js');
 const { uniqueLinks, totalStats, brokenStats } = require('./stats');
 
 // process.argv[0] == "path to node"
@@ -9,7 +9,7 @@ const { uniqueLinks, totalStats, brokenStats } = require('./stats');
 // process.argv[2] == "firstarg"
 
 const options = {
-    validate: false
+    validate: false,
   };
 
   // The slice starting at 2 will discard the "path to node" and "path to the js file"
@@ -32,7 +32,8 @@ const options = {
       options.validate = false;
       mdLinks(path, options)
         .then(link => link.forEach((links) => console.log(` 
-          ${links.href}  ${links.text}  `)))
+          Href: ${links.href}  
+          Text: ${links.text}  `)))
 
         .catch(err => console.log(err)); 
 
@@ -40,7 +41,10 @@ const options = {
       options.validate = true;
       mdLinks(path, options)
         .then(link => link.forEach((linkMd) => console.log(` 
-          ${linkMd.href}  ${linkMd.text} ${linkMd.status} ${linkMd.message}`)))
+          Href: ${linkMd.href}  
+          Text: ${linkMd.text} 
+          Status: ${linkMd.status} 
+          Status Message: ${linkMd.message}`)))
         
         .catch(err => console.log(err));
 
@@ -51,3 +55,4 @@ const options = {
         
      `)).catch(err => console.log(err));
   }
+ // console.log(mdLinks)

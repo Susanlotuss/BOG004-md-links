@@ -1,4 +1,4 @@
-const { validateLinksFiles } = require('./validate')
+// const { validateLinksFiles } = require('./validate')
 
 const uniqueLinks = (contentLinks) => {
     return new Set(contentLinks.map((links) => links.href)).size;
