@@ -5,7 +5,7 @@
     "node": ">=14.x"
   },
   "description": "project mdLinks",
-  "main": "./src/index.js",
+  "main": "./src/controller/index.js",
   "directories": {
     "test": "test"
   },
