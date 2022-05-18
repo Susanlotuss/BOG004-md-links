@@ -34,7 +34,7 @@
     "node-fetch": "^2.6.7"
   },
   "bin": {
-    "md-links": "controller/cli.js"
+    "md-links": "./src/controller/cli.js"
   },
   "devDependencies": {
     "eslint": "^8.15.0",
