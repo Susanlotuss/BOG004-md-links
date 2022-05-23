@@ -23,5 +23,4 @@ const mdLinks = (path, options) => {
   });
 };
 // eslint-disable-next-line no-undef
-//console.log(mdLinks(process.argv[2], {validate: false}))
 module.exports = { mdLinks }

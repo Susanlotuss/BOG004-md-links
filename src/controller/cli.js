@@ -1,19 +1,11 @@
-#!/usr/bin/env node
 /* eslint-disable no-undef */
-//  const inquirer = require('inquirer');
 const { mdLinks } = require('./index.js');
 const { uniqueLinks, totalStats, brokenStats } = require('./stats');
-
-// process.argv[0] == "path to node"
-// process.argv[1] == "path to the js file"  
-// process.argv[2] == "firstarg"
 
 const options = {
     validate: false,
   };
 
-  // The slice starting at 2 will discard the "path to node" and "path to the js file"
-  // and return everything else that was typed on the command line.
   const args = process.argv.slice(2);
   
   const path = process.argv[2]; 
@@ -55,4 +47,3 @@ const options = {
         
      `)).catch(err => console.log(err));
   }
- // console.log(mdLinks)

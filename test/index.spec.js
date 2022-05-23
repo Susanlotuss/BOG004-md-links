@@ -1,8 +1,6 @@
 /* eslint-disable no-undef */
 const { mdLinks } = require('../src/controller/index');
 
-// const path = process.argv[2];
-// console.log(typeof mdLinks)
 describe('mdLinks', () => {
   it('should be a function', () => {
     expect(typeof mdLinks).toBe('function');
